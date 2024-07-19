@@ -7,19 +7,19 @@ const HeaderSocials = () => {
 	return (
 		<div className="header__socials">
 			<a
-				href="https://linkedin.com"
+				href="https://www.linkedin.com/in/ruzimurod-doniev-243026266/"
 				target="_bland"
 			>
 				<BsLinkedin />
 			</a>
 			<a
-				href="https://github.com"
+				href="https://github.com/Ruzimurod11"
 				target="_bland"
 			>
 				<FaGithub />
 			</a>
 			<a
-				href="https://telegram.com"
+				href="https://t.me/UserIsDev"
 				target="_bland"
 			>
 				<FaTelegram />
