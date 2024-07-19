@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
+
 import "./contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm("service_qan7l3g", "template_xkb8kiq", form.current, {
+				publicKey: "dexeaW0zViZ9AHJKW",
+			})
+			.then(
+				() => {
+					console.log("SUCCESS!");
+				},
+				(error) => {
+					console.log("FAILED...", error.text);
+				},
+			);
+		e.target.reset();
+	};
 	return (
 		<section id="contact">
 			<h5>Get In Touch</h5>
@@ -35,7 +56,10 @@ const Contact = () => {
 					</article>
 				</div>
 				{/* end of contact options */}
-				<form action="">
+				<form
+					ref={form}
+					onSubmit={sendEmail}
+				>
 					<input
 						type="text"
 						name="name"

@@ -34,13 +34,13 @@
 
 /* ============ Media Queries (Medium devices) ================ */
 @media (max-width: 1024px) {
-	.testimonials__container {
+	.container.testimonials__container {
 		width: 60%;
 	}
 }
 /* ============ Media Queries (Small devices) ================ */
 @media (max-width: 600px) {
-	.testimonials__container {
+	.container.testimonials__container {
 		width: var(--container-width-sm);
 	}
 
